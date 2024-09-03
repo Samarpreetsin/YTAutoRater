@@ -14,7 +14,7 @@ SCOPES = ['https://www.googleapis.com/auth/youtube']
 api_key = 'AIzaSyCES0pNKa7VZ5bV0WssiO-q2gVwbWdINaE'
 # Channel ID can be retreived via url
 # NEEDS TO BE CHANGED FOR PARTICULAR CHANNEL
-channel_id = input('Enter the channel Id obtained via youtube URL ')
+channel_id = input('https://www.youtube.com/live/_nhnFqu4RD4?si=hUaSb_Y0P62A8EkT ')
 
 ''' For Normal data analysis API KEY is sufficient'''
 #youtube = build('youtube', 'v3', developerKey=api_key)
@@ -87,6 +87,6 @@ def like_video(youtube, video, rate):
 video_count = 0
 videos = get_channel_videos(channel_id)
 for video in videos:
-    video_count += 1
+    video_count += 100
     like_video(youtube, video, 'like')
 print(f'Number of videos rated : {video_count}')
